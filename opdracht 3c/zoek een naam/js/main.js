@@ -8,20 +8,22 @@ document.getElementById("js--serieSubmit").onclick = function(){
     let titelRequest = document.getElementById("js--serieTitelInput").value;
     console.log(titelRequest);
 
-    fetch("https://api.tvmaze.com/search/shows?q="+titelRequest)
-            .then(response => response.json())
-            .then(realData => {
-                if (realData.length > 0) {
-                    const show = realData[0].show;
+let serie = fetch("https://api.tvmaze.com/search/shows?q="+titelRequest)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(realData){
+            if (realData.length > 0) {
+                const show = realData[0].show;
 
-                    document.getElementById("js--naamSerieOutput").innerHTML = show.name;
-                    document.getElementById("js--summarySerieOutput").innerHTML = show.summary;
-                } 
-                else {
-                    document.getElementById("js--summarySerieOutput").innerHTML = "Sorry, no shows found! <br> check for spelling mistakes";
-                }
-                });
-}
+                document.getElementById("js--naamSerieOutput").innerHTML = show.name;
+                document.getElementById("js--summarySerieOutput").innerHTML = show.summary; 
+            } 
+            else {
+                document.getElementById("js--summarySerieOutput").innerHTML = "Sorry, no shows found! <br> check for spelling mistakes";
+            }
+    });
+    }
 
 
 //pokemon
