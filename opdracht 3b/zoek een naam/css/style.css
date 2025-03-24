@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    font-family: sans-serif;
+    background: linear-gradient(to right, lightseagreen, aquamarine);
+    padding: 4rem;
+}
+
+.cards{
+    min-height: 85vh;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 2rem;
+
+}
+
+.card{
+    list-style: none;
+    background: rgba(255,255,255,0.9);
+    border-radius: 1rem;
+    box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.2);
+}
+
+.card--first{
+    grid-row: 1 / 4;
+    grid-column: 1 / 5;
+    text-align: center;
+}
+.card--first2{
+    grid-row: 4 / 7;
+    grid-column: 1 / 5;
+    text-align: center;
+}
+
+.css--naamSerie .css--naamPersoon{
+    margin-top: 1rem;
+}
+
+.css--serieTitelInput{
+    margin-top: 3rem;
+    max-width: 80%;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    font-size: 2rem;
+}
+.css--naamInput{
+    margin-top: 3rem;
+    max-width: 80%;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    font-size: 2rem;
+}
+
+.css--SerieSubmit{
+    font-size: 3rem;
+    height: 20%;
+    width: 80%;
+    max-width:80%;
+    border: none;
+    border-radius: 1rem;
+    background: lightseagreen;
+    color: white;
+    cursor: pointer; 
+}
+
+.card--second{
+    grid-row: 1 / 5;
+    grid-column: 5 / 13;
+    padding: 2rem;
+}
+.card--second2{
+    grid-row: 5 / 9;
+    grid-column: 5 / 13;
+    padding: 2rem;
+}
+
+.card--third{
+    grid-row: 7 / 13;
+    grid-column: 2 / 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.card--third > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card--third > button{
+    width: 15rem;
+    height: 6rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    border: none;
+    background: #ee1515;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 87.5rem){
+    .card--second{
+        grid-row: 1 / 5;
+    }
+    .card--third{
+        grid-column: 1 / 5;
+    }
+}
+
+@media screen and (max-width: 62.5rem){
+    .card--first, .card--first2, .card--second, .card--second2{
+        display:none;
+    }
+
+    .card--third{
+        grid-row: 1 / 12;
+        grid-column: 1 / 12;
+    }
+}

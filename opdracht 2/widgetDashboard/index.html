@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body id="js--body">
+    <article class="card card--slider">
+        <h2 id="js--rangeValue">0</h2>
+        <input id="js--slider" type="range" min="1" max="4" step="1">
+    </article>
+
+    <article class="card card--JPC">
+        <img src="" alt="Jan Pieterszoon Coen" class="JPCimage" id="js--image">
+        <p id="js--text"></p>    
+    </article>
+
+    <article class="card card--stopwatch">
+        <div>
+            <span class="timerText" id="js--minuteTimer">0</span>
+            <span class="timerText">:</span>
+            <span class="timerText" id="js--secondsTimer">0</span>
+        </div>
+        <section class="buttonWrapper">
+            <button class="button button--start" id="js--start">start</button>
+            <button class="button button--stop" id="js--stop">stop</button>
+            <button class="button button--reset" id="js--reset">reset</button>
+        </section>
+        <div>
+            <button class="button button--save" id="js--save">save</button>
+            <span class="savedTime" id="js--savedTime">
+                
+            </span>
+        </div>
+    </article>
+</body>
+</html>
+
+<!-- Stappenplan Slider
+    1. Onderzoeken hoe ik een slider maak.
+    2. Onderzoeken hoe we een slider intstellen (minimale waarde, maximale en stapgrote).
+        a. Min ende max instellen.
+    3. De waarde van de slider in de tegel.
+        a. Een tekstelement maken met de waarde van de slider, standaard op 0.
+        b. in JS opvragen.
+        c. De standaardwaarde van de slider in de console log.
+            i. De slider in JS opvragen.
+            ii. De waarde van de slider lezen.
+        d. De waarde van de slider in de console wanneer ik de slider beweeg/update.
+        e. De standaardwaarde van de slider in het tekstelement
+        f. De waarde van de slider in he tekstelement wanneer ik de slider beweeg/update.
+        g. Stappen instellen.
+    4. Slider stylen
+    5. Inzoomen of uitzoomen van lettergrote op basis van waarde. -->
