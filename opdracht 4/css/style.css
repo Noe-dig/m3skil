@@ -6,18 +6,25 @@
 
 html{
     font-size: 62.5%;
+    min-width: 58rem;
 }
 
 body{
     padding: 4rem;
     font-size: 2rem;
     font-family: sans-serif;
+    background: rgb(220, 220, 220);
 }
-/* header{
+
+header{
     background: black;
     height: 10vh;
     margin: -4rem;
-} */
+}
+
+article{
+    background: white;
+}
 
 .dashboard{
     width: 100%;
@@ -42,25 +49,51 @@ body{
     height: 50%;
     width: 48%;
     flex-grow: 1;
-    box-shadow: 0 1rem 5rem 0 rgba(0,0,0,0.2);
+    box-shadow: 0 1rem 5rem 0 rgba(0,0,0,0.3);
+    padding: 2rem;
 }
 
 .card--first{
-    font-size: 250%;
+    font-size: 7rem;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1rem 0 0 0;
 }
-
-/* .card--second{ } */
-
+.card--third{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 1rem;
+    text-align: center;
+}
+.card--third > button{
+    width: 70%;
+    height: 5rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    border: none;
+    background: #d6d6d6;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
 .section--second{
     grid-column: 6 / 13;
     grid-row: span 13;
     box-shadow:0 1rem 5rem 0 rgba(0,0,0,0.2);
+    border-radius: 1.2rem;
+}
+
+.section--second > article{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 1.2rem 1.2rem 0;
 }
 
 .section--second canvas{
@@ -85,9 +118,20 @@ body{
     .card{
         flex-grow: 1;
     }
+    .card--second{
+        border-radius: 0 1.2rem 0 0;
+    }
+    .card--third{
+        border-radius: 0;
+    }
+    #js--pokemonImage{
+        width: 60%;
+    }
     .section--second{
         grid-column: 1/-1;
         grid-row: 7/13;
     }
-    
+    .section--second > article{
+        border-radius: 0 0 1.2rem 1.2rem;
+    }
 }
