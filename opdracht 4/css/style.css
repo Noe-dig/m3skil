@@ -69,7 +69,7 @@ article{
     border-radius: 0 0 0 1rem;
     text-align: center;
 }
-.card--third > button{
+button{
     width: 70%;
     height: 5rem;
     font-size: 2rem;
@@ -79,6 +79,10 @@ article{
     color: white;
     border-radius: 0.5rem;
     cursor: pointer;
+}
+button:hover{
+    transition: 200ms;
+    background: #b8b8b8;
 }
 .section--second{
     grid-column: 6 / 13;
